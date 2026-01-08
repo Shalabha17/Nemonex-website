@@ -19,7 +19,7 @@
      position: sticky;
     top: 0;
     z-index: 1000;
-    position: relative;
+   
 }
 
 .nav-links a:hover {
@@ -464,60 +464,74 @@ footer {
 /*RESPONSIVE DESIGN*/
 
 
+
+    
+
+
 @media (max-width: 768px) {
 
-     .logo-img {
+    .navbar {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        padding: 14px 16px;
+    }
+
+    /* Force logo into center column */
+    .logo {
+        grid-column: 2 / 3;
+        justify-self: center;
+    }
+
+    .logo a {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .logo-img {
         height: 34px;
     }
 
     .logo-text {
-        font-size: 24px;
+        font-size: 22px;
     }
 
-    .logo{
-        justify-self: center;
-    }
-
+    /* Hamburger on right */
     .hamburger {
         display: block;
-        position: absolute;
-        right: 20px;
+        grid-column: 3 / 4;
+        justify-self: end;
+        font-size: 26px;
+        cursor: pointer;
     }
 
-    .navbar{
-        display:none;
-       justify-content: center;
-    }
-
-    .nav-left{
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%);
-    }
-
+    /* Mobile menu dropdown */
     .nav-links {
         position: absolute;
-        top: 80px;
-        right: 0;
-        background-color: #0d193f;
+        top: 70px;
+        left: 0;
         width: 100%;
+        background-color: #0d193f;
         flex-direction: column;
         align-items: center;
-        gap: 20px;
+        gap: 18px;
         padding: 20px 0;
         display: none;
     }
+
     .nav-links.active {
         display: flex;
     }
 
+    /* Other sections */
     .hero {
         padding: 40px 20px;
         text-align: center;
     }
 
     .hero-text h1 {
-        font-size: 30px;
+        font-size: 28px;
     }
 
     .about-container {
@@ -528,6 +542,7 @@ footer {
     .about-highlights {
         align-items: center;
     }
+
     .about-text h2::after {
         margin-left: auto;
         margin-right: auto;
@@ -540,35 +555,34 @@ footer {
     .section-title {
         font-size: 30px;
     }
-    .contact-box{
-        grid-template-columns: 1fr; /*single column*/
-        padding: 0 15px; /*space from edges */
-        gap:20px;
+
+    .contact-box {
+        grid-template-columns: 1fr;
+        padding: 0 15px;
+        gap: 20px;
     }
 
-    .contact-card{
-
-        width:100% ;
-        margin:0 auto; /*center the card*/
+    .contact-card {
+        width: 100%;
+        margin: 0 auto;
         padding: 25px 20px;
     }
 
-    .contact h2{
-        font-size:28px;
-    
+    .contact h2 {
+        font-size: 28px;
     }
-    .contact-subtitle{
+
+    .contact-subtitle {
         font-size: 15px;
         padding: 0 10px;
     }
 
-    .contact-btn{
-        width:90%;
+    .contact-btn {
+        width: 90%;
         text-align: center;
     }
-
-
 }
+
 
 
 
