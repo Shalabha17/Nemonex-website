@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nemonex Technology</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--Navbar-->
+      <header class="navbar">
+        <h2 class="logo">
+            <a href="#home">
+              <img src="assets/nelogo.png" alt="Nemonex Logo"  class="logo-img">
+               <span class="logo-text">
+                Nemonex<span>Technologies</span>
+               </span>
+            </a>
+        </h2>
+
+         <!-- Hamburger Icon -->
+          <div class="hamburger" id="hamburger">
+            ☰
+          </div>
+        <nav>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+         <div class="hero-text">
+        <h1>Welcome to Nemonex Technologies</h1>
+        <p>Nemonex Technologies is a dynamic startup driving innovation across electronics, IoT,
+         embedded systems, web development, digital marketing, and creative design.
+            We combine engineering excellence and creativity to build smart, scalable, and 
+            future-ready solutions that turn ideas into reality.</p>
+        <button  onclick="location.href='#contact'">Get Started</button>
+        </div>
+      
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+     <div class ="about-container reveal"> 
+      <div class ="about-text"> 
+        <h2>About Us</h2>
+        <p class="about-tagline">
+            Engineering innovation. Delivering real-world impact 
+            
+        </p>
+        <p>
+           At Nemonex Technologies, innovation is more than a goal — it’s our mindset.
+           We are a multidisciplinary technology startup blending engineering precision with creative excellence
+            to deliver impactful, real-world solutions.
+       
+
+          From electronics, IoT, and embedded systems to web development,
+         digital marketing, and multimedia design, we transform ideas into reliable, scalable,
+          and future-ready products. Driven by clarity, innovation, and results,
+           we focus on building long-term value and trusted partnerships for our clients.
+        </p>
+
+     </div>
+       <div class="about-highlights">
+         <div class="highlight">🚀 Innovation-driven solutions</div>
+         <div class="highlight">⚙️ Engineering & Software Expertise</div>
+         <div class="highlight">🤝 Long-term client partnerships</div>
+       </div>
+    </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <h2 class="section-title">Our Services</h2>
+        <p class="services-subtitle">
+        End-to-end solutions across engineering, software, and digital domains.
+    </p>
+        <div class="service-box">
+            <div class="service-card reveal">
+              <div class="service-icon">⚙️</div>
+             <h3>Electrical & Electronic Projects</h3>
+              <p>
+                Embedded systems, IoT solutions, and electronics projects
+                built with precision and reliability.
+             </p>
+             <button class="service-btn"onclick="location.href='#contact'">View Projects</button>
+            </div>
+
+            <div class="service-card reveal">
+             <div class="service-icon">💻</div>
+              <h3>Software Projects</h3>
+               <p>
+                Web applications and software solutions designed to scale
+                with modern technologies.
+            </p>
+            <button class="service-btn" onclick="location.href='#contact'">Get Solution</button>
+            </div>
+
+            <div class="service-card reveal">
+                 <div class="service-icon">📊</div>
+            <h3>Marketing Projects</h3>
+             <p>
+                Digital marketing and creative strategies to grow
+                brand presence and engagement.
+              </p> 
+
+              <button class="service-btn"onclick="location.href='#contact'">Explore Services</button>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+     <h2 class="section-title">Contact Us</h2>
+     <p class="contact-subtitle">
+        Have a project in mind? Let’s discuss how we can help you.
+    </p>
+     <div class="contact-box">
+       <div class="contact-card">
+            <div class="contact-icon">📞</div>
+            <h3>Phone</h3>
+            <a href="tel:+917305698058">+91 73056 98058</a>
+       </div>
+         <div class="contact-card">
+            <div class="contact-icon">✉️</div>
+            <h3>Email</h3>
+            <a href="mailto:nemonextechnologies@gmail.com">nemonextechnologies@gmail.com</a>
+        </div>
+        
+         
+     </div>
+       <div class="contact-cta">
+          <a href="mailto:nemonextechnologies@gmail.com" class="contact-btn">
+            Discuss Your Project
+           </a>
+       </div>
+        
+    </section>
+
+     <!-- Footer -->
+    <footer>
+        <p>© 2025 Nemonex Technologies. All Rights Reserved.</p>
+    </footer>
+    
+<script>
+    const reveals = document.querySelectorAll('.reveal');
+
+    window.addEventListener('scroll', () => {
+        reveals.forEach(el => {
+            const windowHeight = window.innerHeight;
+            const elementTop = el.getBoundingClientRect().top;
+
+            if (elementTop < windowHeight - 100) {
+                el.classList.add('active');
+            }
+        });
+    });
+</script>
+
+<script>
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("navLinks");
+
+    hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+    });
+</script>
+
+</body>
+</html>
