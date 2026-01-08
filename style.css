@@ -474,9 +474,25 @@ footer {
         font-size: 24px;
     }
 
+    .logo{
+        justify-self: center;
+    }
+
     .hamburger {
         display: block;
-        color: white;
+        position: absolute;
+        right: 20px;
+    }
+
+    .navbar{
+        display:none;
+       justify-content: center;
+    }
+
+    .nav-left{
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
     }
 
     .nav-links {
@@ -524,7 +540,37 @@ footer {
     .section-title {
         font-size: 30px;
     }
+    .contact-box{
+        grid-template-columns: 1fr; /*single column*/
+        padding: 0 15px; /*space from edges */
+        gap:20px;
+    }
+
+    .contact-card{
+
+        width:100% ;
+        margin:0 auto; /*center the card*/
+        padding: 25px 20px;
+    }
+
+    .contact h2{
+        font-size:28px;
+    
+    }
+    .contact-subtitle{
+        font-size: 15px;
+        padding: 0 10px;
+    }
+
+    .contact-btn{
+        width:90%;
+        text-align: center;
+    }
+
+
 }
+
+
 
 
 
